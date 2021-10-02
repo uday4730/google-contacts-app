@@ -3,6 +3,9 @@ import phone from '../media/phone.png';
 import profile from '../media/profile.png';
 import ContactList from '../pages/ContactsList';
 import {NavLink} from 'react-router-dom';
+import Family from '../pages/Family';
+import Friends from '../pages/Friends';
+import Favourites from '../pages/Favourites';
 
 function Dash()
 {
@@ -18,6 +21,9 @@ function Dash()
                 </Col>
                 <Col className='d-flex align-items-center' sm='6' md={{ size: 5, offset: 2}}>
                     <input type='search' placeholder='Search' className='border-0 rounded p-3 w-100 bgLight' />
+                    <button type="submit" id="searchBtn">
+                    <i className='fa fa-search searchIcon' lg='4'></i>
+                    </button>
                 </Col>
                 <Col className='p-2 border-0 text-center' sm='2' md={{ size: 1, offset: 2}}>
                     <img src= {profile} className='w-50' alt='profile_img'/>
@@ -40,7 +46,8 @@ function Dash()
                 </ListGroup>
             
             </div>
-           <ContactList/>
+           
+          
         </Container>
         </>
     )
